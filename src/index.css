@@ -221,6 +221,7 @@ button:not(:disabled), [role="button"]:not(:disabled) {
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'Inter Variable', sans-serif;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
