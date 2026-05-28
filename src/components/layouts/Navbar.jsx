@@ -1,16 +1,22 @@
 import { ShoppingBag, User } from "lucide-react"
-import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
-import { cn } from "@/lib/utils"
 
 const Navbar = () => {
   return (
-<header className="fixed top-0 w-full z-50 bg-surface/80 dark:bg-on-surface/80 backdrop-blur-xl border-b border-outline-variant/20 dark:border-outline/20 shadow-sm dark:shadow-none">
-<nav className="flex justify-between items-center w-full h-20 px-6 lg:px-12 max-w-7xl mx-auto">
-  <Link className="text-2xl font-bold text-center flex justify-center" to="/">
+  <header className="fixed top-0 z-50 w-full border-b border-outline-variant/20 bg-surface/80 shadow-sm backdrop-blur-xl dark:border-outline/20 dark:bg-on-surface/80 dark:shadow-none">
+      <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-12">
+        <Link
+          className="flex justify-center text-center text-2xl font-bold"
+          to="/"
+        >
+          <img 
+          src="/src/assets/lume_logo.svg" 
+          alt="Lume Logo"
+          className="w-fit h-fit object-cover"
+            />
           Lume
         </Link>
-        <div className="hidden md:flex-row items-center justify-center gap-3 md:flex">
+        <div className="hidden items-center justify-center gap-3 md:flex md:flex-row">
           <NavLink
             className={({ isActive }) =>
               isActive ? "border-b border-primary" : ""
@@ -23,20 +29,29 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "border-b border-primary" : ""
             }
-          to="/collection">Collection</NavLink>
+            to="/collection"
+          >
+            Collection
+          </NavLink>
           <NavLink
             className={({ isActive }) =>
               isActive ? "border-b border-primary" : ""
             }
-          to="/sustainability">Sustainability</NavLink>
+            to="/sustainability"
+          >
+            Sustainability
+          </NavLink>
           <NavLink
             className={({ isActive }) =>
               isActive ? "border-b border-primary" : ""
             }
-           to="/journal">Journal</NavLink>
+            to="/journal"
+          >
+            Journal
+          </NavLink>
         </div>
 
-        <div className="hidden md:flex items-center justify-center gap-3">
+        <div className="hidden items-center justify-center gap-3 md:flex">
           <User size={18} />
           <div className="flex items-center justify-center gap-2">
             <ShoppingBag size={18} />
