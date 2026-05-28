@@ -6,8 +6,15 @@
 
 @theme inline {
   /* Typography */
+  --font-sans: "Inter Variable", "Inter", sans-serif;
   --font-heading: var(--font-sans);
-  --font-sans: "Inter Variable", sans-serif;
+  --font-display: var(--font-sans);
+  --font-body-large: var(--font-sans);
+  --font-body-base: var(--font-sans);
+  --font-caption: var(--font-sans);
+  --font-label-sm: var(--font-sans);
+  --font-h1: var(--font-sans);
+  --font-h2: var(--font-sans);
 
   /* Core */
   --color-background: var(--background);
@@ -68,9 +75,51 @@
   /* Extra Lume tokens */
   --shadow-soft: 0 2px 10px rgb(0 0 0 / 0.04);
   --shadow-card: 0 8px 30px rgb(0 0 0 / 0.06);
+
+  /* Material Design 3 Colors */
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+
+  /* Material Design 3 Spacing */
+  --spacing-stack-sm: 0.5rem;
+  --spacing-stack-md: 1.5rem;
+  --spacing-stack-lg: 2.5rem;
+  --spacing-card-gap: 1.5rem;
 }
 
 :root {
+  /* =========================
+     Material Design 3 Core (Warm Sage)
+  ========================== */
+  --surface: 105 20% 98%;
+  --on-surface: 135 9% 10%;
+  --surface-variant: 105 10% 92%;
+  --on-surface-variant: 135 5% 40%;
+  --surface-container: 105 12% 94%;
+  --surface-container-low: 105 20% 97%;
+  --inverse-surface: 135 9% 15%;
+  --outline: 105 8% 80%;
+  --outline-variant: 105 8% 88%;
+  --primary-fixed: 164 85% 14%;
+  --primary-container: 150 40% 90%;
+  --on-primary-container: 164 85% 14%;
+  --on-primary: 105 20% 98%;
+  --on-secondary-container: 164 85% 14%;
+  --secondary-fixed-dim: 135 5% 40%;
+
   /* =========================
      Base Surfaces (Soft Neutral)
   ========================== */
@@ -141,6 +190,25 @@
 }
 
 .dark {
+  /* =========================
+     Material Design 3 Core (Dark Emerald)
+  ========================== */
+  --surface: 135 9% 10%;
+  --on-surface: 105 20% 98%;
+  --surface-variant: 135 5% 20%;
+  --on-surface-variant: 135 5% 65%;
+  --surface-container: 135 9% 14%;
+  --surface-container-low: 135 9% 11%;
+  --inverse-surface: 105 20% 98%;
+  --outline: 135 5% 25%;
+  --outline-variant: 135 5% 20%;
+  --primary-fixed: 158 64% 52%;
+  --primary-container: 135 5% 20%;
+  --on-primary-container: 105 20% 98%;
+  --on-primary: 135 9% 10%;
+  --on-secondary-container: 105 20% 98%;
+  --secondary-fixed-dim: 135 5% 65%;
+
   /* =========================
      Base (Deep Zinc)
   ========================== */
@@ -214,14 +282,9 @@
     @apply scroll-smooth font-sans;
   }
 
-
-button:not(:disabled), [role="button"]:not(:disabled) {
-    @apply bg-background text-foreground;
-    }
-
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter Variable', sans-serif;
+    font-family: "Inter Variable", "Inter", sans-serif;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
@@ -261,4 +324,55 @@ button:not(:disabled), [role="button"]:not(:disabled) {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@utility text-display {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+@utility text-h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+@utility text-h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @media (min-width: 768px) {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@utility text-body-large {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@utility text-body-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@utility text-caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@utility text-label-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@utility no-shadows {
+  box-shadow: none !important;
 }
