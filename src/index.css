@@ -17,51 +17,51 @@
   --font-h2: var(--font-sans);
 
   /* Core */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
 
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
 
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
 
   /* Brand */
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
 
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
 
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
 
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
 
-  --color-destructive: var(--destructive);
+  --color-destructive: hsl(var(--destructive));
 
   /* UI */
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
 
   /* Sidebar */
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
 
   /* Charts */
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
 
   /* Radius */
   --radius-sm: calc(var(--radius) * 0.6);
@@ -77,21 +77,21 @@
   --shadow-card: 0 8px 30px rgb(0 0 0 / 0.06);
 
   /* Material Design 3 Colors */
-  --color-surface: var(--surface);
-  --color-on-surface: var(--on-surface);
-  --color-surface-variant: var(--surface-variant);
-  --color-on-surface-variant: var(--on-surface-variant);
-  --color-surface-container: var(--surface-container);
-  --color-surface-container-low: var(--surface-container-low);
-  --color-inverse-surface: var(--inverse-surface);
-  --color-outline: var(--outline);
-  --color-outline-variant: var(--outline-variant);
-  --color-primary-fixed: var(--primary-fixed);
-  --color-primary-container: var(--primary-container);
-  --color-on-primary-container: var(--on-primary-container);
-  --color-on-primary: var(--on-primary);
-  --color-on-secondary-container: var(--on-secondary-container);
-  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-surface: hsl(var(--surface));
+  --color-on-surface: hsl(var(--on-surface));
+  --color-surface-variant: hsl(var(--surface-variant));
+  --color-on-surface-variant: hsl(var(--on-surface-variant));
+  --color-surface-container: hsl(var(--surface-container));
+  --color-surface-container-low: hsl(var(--surface-container-low));
+  --color-inverse-surface: hsl(var(--inverse-surface));
+  --color-outline: hsl(var(--outline));
+  --color-outline-variant: hsl(var(--outline-variant));
+  --color-primary-alt: hsl(var(--primary-alt));
+  --color-primary-container: hsl(var(--primary-container));
+  --color-on-primary-container: hsl(var(--on-primary-container));
+  --color-on-primary: hsl(var(--on-primary));
+  --color-on-secondary-container: hsl(var(--on-secondary-container));
+  --color-secondary-dim: hsl(var(--secondary-dim));
 
   /* Material Design 3 Spacing */
   --spacing-stack-sm: 0.5rem;
@@ -113,12 +113,12 @@
   --inverse-surface: 135 9% 15%;
   --outline: 105 8% 80%;
   --outline-variant: 105 8% 88%;
-  --primary-fixed: 164 85% 14%;
+  --primary-alt: 164 85% 14%;
   --primary-container: 150 40% 90%;
   --on-primary-container: 164 85% 14%;
   --on-primary: 105 20% 98%;
   --on-secondary-container: 164 85% 14%;
-  --secondary-fixed-dim: 135 5% 40%;
+  --secondary-dim: 135 5% 40%;
 
   /* =========================
      Base Surfaces (Soft Neutral)
@@ -202,12 +202,12 @@
   --inverse-surface: 105 20% 98%;
   --outline: 135 5% 25%;
   --outline-variant: 135 5% 20%;
-  --primary-fixed: 158 64% 52%;
+  --primary-alt: 158 64% 52%;
   --primary-container: 135 5% 20%;
   --on-primary-container: 105 20% 98%;
   --on-primary: 135 9% 10%;
   --on-secondary-container: 105 20% 98%;
-  --secondary-fixed-dim: 135 5% 65%;
+  --secondary-dim: 135 5% 65%;
 
   /* =========================
      Base (Deep Zinc)
@@ -300,7 +300,7 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--primary) 20%, transparent);
+    background: color-mix(in oklab, hsl(var(--primary)) 20%, transparent);
   }
 }
 

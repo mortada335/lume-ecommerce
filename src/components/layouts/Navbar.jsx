@@ -3,63 +3,59 @@ import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
-  <header className="fixed top-0 z-50 w-full border-b border-outline-variant/20 bg-surface/80 shadow-sm backdrop-blur-xl dark:border-outline/20 dark:bg-on-surface/80 dark:shadow-none">
-      <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-12">
-        <Link
-          className="flex justify-center text-center text-2xl font-bold"
-          to="/"
-        >
-          <img 
-          src="/src/assets/lume_logo.svg" 
-          alt="Lume Logo"
-          className="w-fit h-fit object-cover"
-            />
-          Lume
-        </Link>
-        <div className="hidden items-center justify-center gap-3 md:flex md:flex-row">
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "border-b border-primary" : ""
-            }
-            to="/shop"
-          >
-            Shop
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "border-b border-primary" : ""
-            }
-            to="/collection"
-          >
-            Collection
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "border-b border-primary" : ""
-            }
-            to="/sustainability"
-          >
-            Sustainability
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "border-b border-primary" : ""
-            }
-            to="/journal"
-          >
-            Journal
-          </NavLink>
-        </div>
-
-        <div className="hidden items-center justify-center gap-3 md:flex">
-          <User size={18} />
-          <div className="flex items-center justify-center gap-2">
-            <ShoppingBag size={18} />
-            <span>Cart</span>
+      <header className="fixed top-0 z-50 w-full border-b border-outline-variant/20 bg-surface/80 shadow-sm backdrop-blur-xl dark:shadow-none">
+        <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 lg:px-12">
+          <div className="flex items-center gap-4">
+            {/* <img
+              src="/src/assets/lume_logo.svg"
+              alt="Lume Logo"
+              className="h-14 w-14 rounded-lg object-cover"
+            /> */}
+            <span className="font-display text-h2 font-semibold tracking-tight text-primary">
+              Lume
+            </span>
           </div>
-        </div>
-      </nav>
-    </header>
+          <div className="hidden items-center gap-8 md:flex">
+            <a
+              className="border-b-2 border-primary pb-1 font-semibold text-primary"
+              href="#"
+            >
+              Shop All
+            </a>
+            <a
+              className="font-medium text-on-surface-variant transition-colors duration-300 hover:text-primary"
+              href="#"
+            >
+              Furniture
+            </a>
+            <a
+              className="font-medium text-on-surface-variant transition-colors duration-300 hover:text-primary"
+              href="#"
+            >
+              Lighting
+            </a>
+            <a
+              className="font-medium text-on-surface-variant transition-colors duration-300 hover:text-primary"
+              href="#"
+            >
+              Decor
+            </a>
+          </div>
+          <div className="flex items-center gap-6">
+            <button className="text-on-surface-variant transition-colors duration-300 hover:text-primary active:scale-[0.98]">
+              <span className="material-symbols-outlined">person</span>
+            </button>
+            <button className="flex items-center gap-2 text-on-surface-variant transition-colors duration-300 hover:text-primary active:scale-[0.98]">
+              <span className="material-symbols-outlined">
+                <ShoppingBag size={24} />
+              </span>
+              <span className="hidden font-body-base font-medium md:inline">
+                Cart
+              </span>
+            </button>
+          </div>
+        </nav>
+      </header>
   )
 }
 
