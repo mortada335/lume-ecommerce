@@ -64,7 +64,7 @@ const NEW_ARRIVALS = [
 ];
 
 const HeroSection = () => (
-  <section className="relative flex min-h-[600px] w-full items-center justify-center overflow-hidden bg-surface-container py-20">
+  <section className="relative flex min-h-150 w-full items-center justify-center overflow-hidden bg-surface-container py-20">
     <div className="absolute inset-0 z-0">
       <img
         alt="Minimalist modern living room"
@@ -95,7 +95,7 @@ const CategorySection = () => (
     <h2 className="mb-stack-lg text-center font-h1 text-h1 text-primary">
       Shop by Category
     </h2>
-    <div className="grid grid-cols-1 gap-card-gap md:grid-cols-3 md:grid-rows-2 md:h-[600px]">
+    <div className="grid grid-cols-1 gap-card-gap md:grid-cols-3 md:grid-rows-2 md:h-150">
       <div className={CATEGORIES[0].className + " md:row-span-2"}>
         <img
           alt={CATEGORIES[0].alt}
@@ -192,7 +192,6 @@ const Home = () => {
         <CategorySection />
         <NewArrivalsSection />
       </main>
-      <FooterSection />
     </>
   )
 }
