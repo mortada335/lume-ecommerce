@@ -18,7 +18,7 @@ const Navbar = () => {
           <div className="hidden items-center gap-8 md:flex">
             <a
               className="border-b-2 border-primary pb-1 font-semibold text-primary"
-              href="#"
+              href="/shop"
             >
               Shop All
             </a>
