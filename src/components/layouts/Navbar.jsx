@@ -11,35 +11,32 @@ const Navbar = () => {
               alt="Lume Logo"
               className="h-14 w-14 rounded-lg object-cover"
             /> */}
-            <span className="font-display text-h2 font-semibold tracking-tight text-primary">
+            <NavLink
+             className="font-display text-h2 font-semibold tracking-tight text-primary"
+             to="/"
+             >
               Lume
-            </span>
+            </NavLink>
           </div>
           <div className="hidden items-center gap-8 md:flex">
-            <a
+            <NavLink
               className="border-b-2 border-primary pb-1 font-semibold text-primary"
-              href="/shop"
+              to="/store"
             >
-              Shop All
-            </a>
-            <a
+              Store
+            </NavLink>
+            <NavLink
               className="font-medium text-on-surface-variant transition-colors duration-300 hover:text-primary"
-              href="#"
+              to="/categories"
             >
-              Furniture
-            </a>
-            <a
+              Categories
+            </NavLink>
+            <NavLink
               className="font-medium text-on-surface-variant transition-colors duration-300 hover:text-primary"
-              href="#"
+              to="/about"
             >
-              Lighting
-            </a>
-            <a
-              className="font-medium text-on-surface-variant transition-colors duration-300 hover:text-primary"
-              href="#"
-            >
-              Decor
-            </a>
+              About Us
+            </NavLink>
           </div>
           <div className="flex items-center gap-6">
             <button className="text-on-surface-variant transition-colors duration-300 hover:text-primary active:scale-[0.98]">
