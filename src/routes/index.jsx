@@ -1,7 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import { lazy } from "react"
 
-const Home = lazy(() => import("@/features/home"))
-const Shop = lazy(() => import("@/features/shop"))
+const Home = lazy(() => import("@/features/Home"))
+const Store = lazy(() => import("@/features/Store"))
 
 export const publicRoutes = [
   {
@@ -10,7 +11,7 @@ export const publicRoutes = [
     index: true,
   },
   {
-    path: "/shop",
-    element: <Shop />,
+    path: "/store",
+    element: <Store />,
   },
 ]
