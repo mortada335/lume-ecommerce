@@ -1,12 +1,7 @@
-
+import Shop from "@/features/shop"
 
 const Store = () => {
-
-        return (
-                <>
-                <h1>hello from store</h1>
-                </>
-        )
+  return <Shop />
 }
 
-export default Store;
+export default Store
