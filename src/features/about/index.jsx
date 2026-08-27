@@ -105,6 +105,7 @@ const About = () => {
               data-alt="A serene, minimalist living space featuring a meticulously crafted wooden chair bathed in soft, natural daylight."
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJXS8-n5qOh7YEZrqpGcqeaUr11Nfcm1VNzZ2PPY_gpH05v2lwbfssE0Vn2aTFszZ6fMCcEmhQLUKsAZjzlSc0DX3EeaVtqT9Lj9ytlUvfN6x0fT3DNpqy5rwAYNjCf3fGYX-ZI5ovVm20B9kK7Uiir2F_GrgW5EL-FaVKBauSY14-W62w8_8I1nfPxXKQ-dhnCf6SK3WZAom_KGtgWEwDe5GtQmDrfnxX25QpAN-2e8aUQoScKte_DWE6eTmJBymI7PxWxFU7J0s"
               alt="Lume Craftsmanship"
+              loading="lazy"
             />
           </div>
         </section>
@@ -121,6 +122,7 @@ const About = () => {
                   data-alt="Close-up macro photography of hands delicately sanding a piece of raw, sustainably sourced walnut wood."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1-ebkFSlDXb7DU7M2f1eN_m4Mlv8Fh-J5JOf3hJClupYcH8peBXgAjudQna2H0oA9qsLkrxKNjwtJVNPiw4__X8qvrLhLZXiK8sOiFQaqKwYDc9vYrfsBdYaiXwhM5BFzsAf64MQPEktX9ThN5l1E4xOQmW4B9HfSeel2jO_9y_FnEcWRfY7BvTv8iJGBsZjs84Z8Gpycpv-WFN2-h71Uq3vnek34f5ap2CIHuyiXs6a5TstjmIJVkstF_bmciO5aT109t5ji10"
                   alt="Intentional Craft"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface/95 via-surface/50 to-transparent"></div>
               </div>

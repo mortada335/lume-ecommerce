@@ -404,6 +404,7 @@ const Shop = () => {
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt={product.dataAlt}
                         src={product.image}
+                        loading="lazy"
                       />
                       {product.isNew && (
                         <div className="absolute top-4 left-4 rounded-md bg-secondary-container px-2.5 py-1 text-caption font-medium text-on-secondary-container shadow-xs">
