@@ -6,8 +6,8 @@ import useCartStore from "@/store/cartStore"
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { items, toggleDrawer } = useCartStore()
-  const totalItems = items.reduce((sum, i) => sum + i.quantity, 0)
+  const totalItems = useCartStore((s) => s.items.reduce((sum, i) => sum + i.quantity, 0))
+  const toggleDrawer = useCartStore((s) => s.toggleDrawer)
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-outline-variant/20 bg-surface/80 shadow-sm backdrop-blur-xl dark:shadow-none">

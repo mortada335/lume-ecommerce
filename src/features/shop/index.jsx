@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo, useEffect, useDeferredValue } from "react"
 import { Link } from "react-router-dom"
 import { Search, Heart, Plus, CheckCircle, ChevronDown, X } from "lucide-react"
 import { getProducts } from "@/services/api"
@@ -34,6 +34,7 @@ const Shop = () => {
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false)
   const [addedPopup, setAddedPopup] = useState(null)
 
+  const deferredSearch = useDeferredValue(searchQuery)
   const { addItem } = useCartStore()
 
   useEffect(() => {
@@ -66,8 +67,12 @@ const Shop = () => {
       .filter((p) => {
         if (selectedCategory !== "all" && p.category !== selectedCategory) return false
         if (p.price > maxPrice) return false
-        if (searchQuery.trim()) {
-          const q = searchQuery.toLowerCase()
+        if (selectedColor) {
+          const targetHex = COLOR_OPTIONS.find((c) => c.id === selectedColor)?.hex
+          if (targetHex && !p.colors?.includes(targetHex)) return false
+        }
+        if (deferredSearch.trim()) {
+          const q = deferredSearch.toLowerCase()
           if (!p.name.toLowerCase().includes(q) && !p.category.toLowerCase().includes(q)) return false
         }
         return true
@@ -78,7 +83,7 @@ const Shop = () => {
         if (sortBy === "popular") return b.popularity - a.popularity
         return new Date(b.dateAdded) - new Date(a.dateAdded)
       })
-  }, [allProducts, selectedCategory, maxPrice, searchQuery, sortBy])
+  }, [allProducts, selectedCategory, maxPrice, selectedColor, deferredSearch, sortBy])
 
   const resetFilters = () => {
     setSelectedCategory("all")

@@ -10,7 +10,8 @@ const HeroSection = () => {
           alt="Minimalist modern living room"
           className="h-full w-full object-cover opacity-80"
           src="/images/img_14.jpg"
-          loading="preload"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-stack-lg px-6 text-center">
