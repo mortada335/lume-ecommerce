@@ -5,25 +5,25 @@ const FOOTER_SECTIONS = [
     title: "Shop",
     links: [
       { label: "All Products", to: "/shop" },
-      { label: "Office Collection", to: "/office" },
+      { label: "Workspace Collection", to: "/workspace" },
       { label: "Seating", to: "/seating" },
-    ]
+    ],
   },
   {
-    title: "About",
+    title: "Brand",
     links: [
-      { label: "Sustainability", to: "/about" },
-      { label: "Our Philosophy", to: "/about" },
-      { label: "Lifetime Guarantee", to: "/about" },
-    ]
+      { label: "Philosophy", to: "/philosophy" },
+      { label: "Sustainability", to: "/philosophy" },
+      { label: "Lifetime Guarantee", to: "/philosophy" },
+    ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", to: "/about" },
-      { label: "Terms of Service", to: "/about" },
-    ]
-  }
+      { label: "Privacy Policy", to: "/philosophy" },
+      { label: "Terms of Service", to: "/philosophy" },
+    ],
+  },
 ]
 
 const Footer = () => {

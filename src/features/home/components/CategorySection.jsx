@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom"
-import { CATEGORIES } from "../store/items";
+import { HOME_CATEGORIES as CATEGORIES } from "@/data/categories"
+import { ArrowRight } from "lucide-react"
+
 
 const CategorySection = () => {
 
@@ -19,7 +21,7 @@ const CategorySection = () => {
             alt={CATEGORIES[0].alt}
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             src={CATEGORIES[0].image}
-            loading="lazy"
+            loading="preload"
           />
           <div className="absolute inset-0 bg-linear-to-t from-primary/80 to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-8">
@@ -28,9 +30,7 @@ const CategorySection = () => {
             </h3>
             <span className="flex items-center gap-2 font-body-base text-body-base text-surface-variant transition-colors group-hover:text-on-primary">
               {CATEGORIES[0].linkText}{" "}
-              <span className="material-symbols-outlined text-sm">
-                arrow_forward
-              </span>
+                <ArrowRight size={18} />
             </span>
           </div>
         </div>
@@ -45,7 +45,7 @@ const CategorySection = () => {
               alt={category.alt}
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               src={category.image}
-              loading="lazy"
+              loading="preload"
             />
             <div className="absolute inset-0 bg-linear-to-t from-primary/80 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-6">

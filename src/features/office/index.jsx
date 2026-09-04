@@ -1,3 +1,8 @@
+import { ChevronRight } from "lucide-react"
+import { ChevronDown } from "lucide-react"
+import { Plus } from "lucide-react"
+import { Heart } from "lucide-react"
+import { CircleCheck } from "lucide-react"
 import React, { useState, useMemo } from "react"
 import { Link } from "react-router-dom"
 
@@ -9,7 +14,7 @@ const OFFICE_PRODUCTS = [
     subCategoryKey: "seating",
     price: 780,
     formattedPrice: "$780",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPC_qafLdLqsVvBIu1U0X9iXSu-sa517Fvuk4f13I3DEr_zl0Q0bIP6J-8a509Ik6YWJhfa6bpCCsSULFxbqgnbjnqlq3knOmdLriqAy7x4tR_MqGmcfL0BaXHPddNfSY2LgEyjlshXjWt_V75_qXIKJYETeApPO-2206UdcRcDdRtacEiV5EXxGc0CZlNLe1dGIvvTCJ4syuOM7HdZCwuGR9pZXmhX_uSN8GU_N4Wd9HwdtKQL07RQTPT7g3kD2rKAUtD0hgcpOw",
+    image: "/images/img_04.jpg",
     dataAlt: "Minimalist ergonomic task chair in muted sage fabric with brushed aluminum base.",
     colors: ["#5D6B60", "#1A1A1A"],
     isNew: true,
@@ -23,7 +28,7 @@ const OFFICE_PRODUCTS = [
     subCategoryKey: "lighting",
     price: 195,
     formattedPrice: "$195",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAEt5tObwkYcVhIKZs6B3kQu0vvvO3ZHoWKMHcr2zWqNZmSRiWmkakxW8_nCGPEMNibI4Fb3FnAaA4IAMV7ajZDHjZejjgKhVAwtdmGhgpnU7FzmL5cKR-AOKzY4NR52ypBuQ02cqlbZ-1tgXdEqebAQ9m9I9xhfoaIVcAD7q3zEqFwMOXF-jCHT5hhLeF5UZfLWSZ7MTm3Buqr16jKX-hSRgKmEeykYSfg4ANcveSKOSIPLeA4r_Ock2K2RzvlNzFdXLvnDXM1NvY",
+    image: "/images/img_17.jpg",
     dataAlt: "Sleek, minimalist desk lamp with slender arm and matte finish.",
     colors: ["#1A1A1A", "#E5E5E5"],
     isNew: false,
@@ -37,7 +42,7 @@ const OFFICE_PRODUCTS = [
     subCategoryKey: "desks",
     price: 1450,
     formattedPrice: "$1,450",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAVxwftUQF0HcB0r4fep3gcOaYzpn1IVmZK9PTGeOtuPJigWCUV8-0YO1p6lmr1UcMUJGKVTS7kvUOJvWNTWIaZsoGRQovnuEVGw79eECZU0nKNhDtCwCVFn5feb24VXPqSTj0hAc66BaF-RB5VFqbbM30H7ULxc4D_dXVSuIguhG33-NEa_IuHQzaxtJs2wpP7RNo9O8THO1x0HwRIRvGIbUhhCJ7feZJkhhQset4_mgvCpLMmoBY0-2-RkbLCgTPDj5X9F_kNIk0",
+    image: "/images/img_18.jpg",
     dataAlt: "Solid white oak executive desk with chamfered edges and integrated discreet cable route.",
     colors: ["#C2B280", "#1A1A1A"],
     isNew: false,
@@ -51,7 +56,7 @@ const OFFICE_PRODUCTS = [
     subCategoryKey: "accessories",
     price: 95,
     formattedPrice: "$95",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDi3S7tzh1jFyBgHn62LDWo9-X9mhEYuoRDAEQ_heKFxxQIeojNf2qP5eJs6tDUo0XUoqBt5HFgo46f3SRBV6wAL3N5cafrdHYKk0VY1h1DC80Hp_Dk5Bug5n-bUrjNisZvb-uNJfcbwc542lIoruf_kTyVFxHLi388ObrJLy-ZWJfeU_v5ux4KWwj3uUqKcz8csdEN_4JjBh2l2elJofyk0vu5ixU5M_NQvBY4Ww7u0-R5eP3rgsDv1Apttda7IX-nhRFR_tN9Ah4",
+    image: "/images/img_03.jpg",
     dataAlt: "Heavyweight brushed brass desk organizer tray set.",
     colors: ["#8C5A4C", "#C2B280"],
     isNew: false,
@@ -65,7 +70,7 @@ const OFFICE_PRODUCTS = [
     subCategoryKey: "lighting",
     price: 320,
     formattedPrice: "$320",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCU5Q4HWy6fODkFr-0Y4BiI8_kreiAOkKo2bV3pwa95isNVSUg7nOygDcLVAyzL1r3KrZ7N0d_qZCYJ_xM9NDuuvN1KNXpUlHNPwB8bYEh57R3zGWYl43cMYKXzfyMN9jzFsiY2iXaSdugysJLpws5N1X-gFDrTG7wHxjlRtsNHGnEsXc1vSqj8aIRFTI8ku9CcMIztWkqywUD-K6_lDSYdkb6UTVRzMLKA3gtEiewIAMYnSvDR7QOQhSN2Vy-bOgkwgJDNKukrdAc",
+    image: "/images/img_09.jpg",
     dataAlt: "Minimalist task lamp with weighted stone base.",
     colors: ["#1A1A1A", "#E5E5E5"],
     isNew: true,
@@ -79,7 +84,7 @@ const OFFICE_PRODUCTS = [
     subCategoryKey: "storage",
     price: 980,
     formattedPrice: "$980",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCixSA6ULhznH5vNEvt46ym64VbWS2e8EEvbCfNHtNQsf-XNVf_NfMsXsg0mFj6WGTvEuohhDCplxufT3vlXGskASvv-xj9LwwEhSgldmym7uYRzrH4vSdR3QYddkJLOMqWakLAHiqwxssk0Fns2t45VAqlwFLYVbtpVRqaazJ3cmxHy95aXBcayCgUUbjYuIvjBH28cm__rlLFaIFXo8whHR9wFF9EsXG0KMRbZcZKGIuWAsqkwmW5zvA_oPue4328I1GpAqiBPQg",
+    image: "/images/img_02.jpg",
     dataAlt: "Minimalist low credenza with push-to-open fluted timber doors.",
     colors: ["#1A1A1A", "#C2B280"],
     isNew: false,
@@ -142,7 +147,7 @@ const Office = () => {
     <div className="min-h-screen bg-background text-on-background">
       {addedPopup && (
         <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-xl bg-primary px-5 py-3 text-on-primary shadow-lg animate-in fade-in slide-in-from-bottom-5">
-          <span className="material-symbols-outlined text-[20px]">check_circle</span>
+          <span className="text-[20px]"><CircleCheck /></span>
           <span className="font-label-sm text-label-sm">Added <strong>{addedPopup}</strong> to cart</span>
         </div>
       )}
@@ -154,7 +159,7 @@ const Office = () => {
             <Link className="transition-colors hover:text-primary" to="/">
               Home
             </Link>
-            <span className="material-symbols-outlined mx-1 text-[14px]">chevron_right</span>
+              <ChevronRight className="mx-1" size={18} />
             <span className="font-medium text-on-surface">Office</span>
           </nav>
           <div className="max-w-2xl">
@@ -230,8 +235,8 @@ const Office = () => {
                 <option value="price-asc">Price: Low to High</option>
                 <option value="price-desc">Price: High to Low</option>
               </select>
-              <span className="material-symbols-outlined pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-on-surface-variant text-[20px]">
-                expand_more
+              <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-on-surface-variant text-[20px]">
+                <ChevronDown size={18} />
               </span>
             </div>
           </div>
@@ -262,13 +267,13 @@ const Office = () => {
                       className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-surface-container-lowest/80 text-on-surface-variant shadow-sm backdrop-blur transition-colors hover:text-red-500"
                     >
                       <span
-                        className="material-symbols-outlined text-[20px]"
+                        className=" text-[20px]"
                         style={{
                           fontVariationSettings: isFavorited ? "'FILL' 1" : "'FILL' 0",
-                          color: isFavorited ? "#ba1a1a" : "inherit"
+                          color: isFavorited ? "#ba1a1a" : "inherit",
                         }}
                       >
-                        favorite
+                        <Heart fill={ isFavorited ? "#ba1a1a" : "none"} />
                       </span>
                     </button>
                   </div>
@@ -287,7 +292,7 @@ const Office = () => {
                         onClick={e => handleQuickAdd(product, e)}
                         className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-container-high text-primary transition-all hover:bg-primary hover:text-on-primary"
                       >
-                        <span className="material-symbols-outlined text-[18px]">add</span>
+                        <Plus size={18} />
                       </button>
                     </div>
                   </div>

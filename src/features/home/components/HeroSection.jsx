@@ -9,8 +9,8 @@ const HeroSection = () => {
         <img
           alt="Minimalist modern living room"
           className="h-full w-full object-cover opacity-80"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdU5RxBjHwaLTh4L6gn5xJCVcjsAyjvqcoPQ8j-dt-V3O7FvEcmkaQCIuZdlrlVl7hGSf6LGkVX-rcsT6T34KbMmwjga7sQz93txGJmJx5ubGFNjXpySOIl2NHlckoXCklDfh2C68vjGRZ2BJ5TSn_8Ph2T_0ggGJeUUW4vhIPDUaQKpyKOYsbFl1U5Tslltoon-fbSDNMMWEVViwao1Oj7XUTyIcmOFZJYKXsQQ-6h-O2lL5GEPtSDOsAG8rRGfdwdOWzpN1Kbaw"
-          loading="lazy"
+          src="/images/img_14.jpg"
+          loading="preload"
         />
       </div>
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-stack-lg px-6 text-center">

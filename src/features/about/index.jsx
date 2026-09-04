@@ -1,18 +1,31 @@
+import {
+  Leaf,
+  ChevronRight,
+  X,
+  Trees,
+  Droplets,
+  Recycle,
+  Sparkles,
+  Award,
+} from "lucide-react"
+
+
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import SubHeader from "@/components/layouts/SubHeader"
 
 const PHILOSOPHY_PILLARS = [
   {
     id: "fsc",
     title: "FSC Certified",
     description: "100% of our timber is sourced from responsibly managed forests.",
-    icon: "forest"
+    icon: Trees
   },
   {
     id: "water",
     title: "Water Neutral",
     description: "Our finishing processes are entirely closed-loop, ensuring zero toxic runoff.",
-    icon: "water_drop"
+    icon: Droplets
   }
 ]
 
@@ -21,13 +34,13 @@ const LONGEVITY_PROGRAMS = [
     id: "guarantee",
     title: "The Lume Lifetime Guarantee",
     description: "Structural integrity is guaranteed for life. If a joint fails or a frame weakens under normal use, we repair it at no cost. It's a promise of enduring quality.",
-    icon: "build"
+    icon: Award
   },
   {
     id: "revitalize",
     title: "Revitalize & Return",
     description: "When your life changes, your furniture can too. Return eligible Lume pieces for a credit towards your next purchase. We refurbish and re-home them, keeping materials in circulation.",
-    icon: "recycling"
+    icon: Recycle
   }
 ]
 
@@ -36,15 +49,15 @@ const About = () => {
   const [rewardsJoined, setRewardsJoined] = useState(false)
 
   return (
-    <div className="min-h-screen bg-background text-on-background">
+    <div className="min-h-screen bg-background text-on-background pt-20">
       {/* Report Modal */}
       {reportModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-green-50/60 backdrop-blur-sm p-6">
           <div className="w-full max-w-lg rounded-2xl bg-surface-container-lowest p-8 border border-outline-variant/40 shadow-2xl animate-in zoom-in-95">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-h2 text-h2 text-primary">2024 Sustainability Audit</h3>
               <button onClick={() => setReportModalOpen(false)} className="text-on-surface-variant hover:text-primary">
-                <span className="material-symbols-outlined">close</span>
+                <X size={24} />
               </button>
             </div>
             <p className="font-body-base text-body-base text-on-surface-variant mb-6">
@@ -65,20 +78,24 @@ const About = () => {
       {/* Rewards Toast */}
       {rewardsJoined && (
         <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-xl bg-primary px-5 py-3 text-on-primary shadow-lg animate-in fade-in slide-in-from-bottom-5">
-          <span className="material-symbols-outlined text-[20px]">eco</span>
+          <Leaf size={20} />
           <span className="font-label-sm text-label-sm">Welcome to Lume Rewards & Sustainability Club!</span>
         </div>
       )}
 
-      <main className="pt-28 md:pt-32 pb-section-padding px-6 lg:px-12 max-w-7xl mx-auto w-full">
-        {/* Breadcrumbs */}
-        <nav className="mb-6 flex items-center text-caption text-on-surface-variant">
-          <Link className="transition-colors hover:text-primary" to="/">
-            Home
-          </Link>
-          <span className="material-symbols-outlined mx-1 text-[14px]">chevron_right</span>
-          <span className="font-medium text-on-surface">About & Sustainability</span>
-        </nav>
+      {/* Fixed-height Breadcrumb + Filter Section (h-14 / 56px) */}
+      <SubHeader
+        breadcrumbs={[
+          { label: "Home", to: "/" },
+          { label: "Philosophy" },
+        ]}
+      >
+        <span className="hidden sm:inline text-caption text-primary font-medium tracking-wide uppercase">
+          Quiet Luxury & Sustainability
+        </span>
+      </SubHeader>
+
+      <main className="pt-8 md:pt-10 pb-section-padding px-6 lg:px-12 max-w-7xl mx-auto w-full">
 
         {/* Hero Section */}
         <section className="mb-24 flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -87,7 +104,7 @@ const About = () => {
               Designed for life.<br />Built for generations.
             </h1>
             <p className="font-body-large text-body-large text-on-surface-variant max-w-lg">
-              At Lume, we believe true sustainability begins with intention. It’s not just about the materials we choose, but the lifespan of the objects we create. We design quiet, premium essentials that endure.
+              At Lume, we believe true sustainability begins with intention. It's not just about the materials we choose, but the lifespan of the objects we create. We design quiet, premium essentials that endure.
             </p>
             <button
               onClick={() => {
@@ -103,7 +120,7 @@ const About = () => {
             <img
               className="absolute inset-0 w-full h-full object-cover"
               data-alt="A serene, minimalist living space featuring a meticulously crafted wooden chair bathed in soft, natural daylight."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJXS8-n5qOh7YEZrqpGcqeaUr11Nfcm1VNzZ2PPY_gpH05v2lwbfssE0Vn2aTFszZ6fMCcEmhQLUKsAZjzlSc0DX3EeaVtqT9Lj9ytlUvfN6x0fT3DNpqy5rwAYNjCf3fGYX-ZI5ovVm20B9kK7Uiir2F_GrgW5EL-FaVKBauSY14-W62w8_8I1nfPxXKQ-dhnCf6SK3WZAom_KGtgWEwDe5GtQmDrfnxX25QpAN-2e8aUQoScKte_DWE6eTmJBymI7PxWxFU7J0s"
+              src="/images/img_15.jpg"
               alt="Lume Craftsmanship"
               loading="lazy"
             />
@@ -113,14 +130,14 @@ const About = () => {
         {/* Our Philosophy (Bento Grid) */}
         <section className="mb-24">
           <h2 className="font-h1 text-h1 text-primary mb-12">Our Philosophy</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[280px]">
+          <div className="grid grid-cols-1 gap-6 auto-rows-[280px]">
             {/* Bento 1: Large Intentional Craft */}
             <div className="md:col-span-2 rounded-2xl border border-outline-variant/30 bg-surface-container-lowest p-8 flex flex-col justify-end relative overflow-hidden group">
               <div className="absolute inset-0 z-0">
                 <img
                   className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                   data-alt="Close-up macro photography of hands delicately sanding a piece of raw, sustainably sourced walnut wood."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1-ebkFSlDXb7DU7M2f1eN_m4Mlv8Fh-J5JOf3hJClupYcH8peBXgAjudQna2H0oA9qsLkrxKNjwtJVNPiw4__X8qvrLhLZXiK8sOiFQaqKwYDc9vYrfsBdYaiXwhM5BFzsAf64MQPEktX9ThN5l1E4xOQmW4B9HfSeel2jO_9y_FnEcWRfY7BvTv8iJGBsZjs84Z8Gpycpv-WFN2-h71Uq3vnek34f5ap2CIHuyiXs6a5TstjmIJVkstF_bmciO5aT109t5ji10"
+                  src="/images/img_16.jpg"
                   alt="Intentional Craft"
                   loading="lazy"
                 />
@@ -135,22 +152,25 @@ const About = () => {
             </div>
 
             {/* Bento 2 & 3: FSC & Water Neutral */}
-            {PHILOSOPHY_PILLARS.map(pillar => (
-              <div
-                key={pillar.id}
-                className="rounded-2xl border border-outline-variant/30 bg-surface-container-lowest p-8 flex flex-col items-start justify-center shadow-xs"
-              >
-                <span className="material-symbols-outlined text-primary text-4xl mb-4">{pillar.icon}</span>
-                <h3 className="font-h2 text-h2 text-primary mb-2">{pillar.title}</h3>
-                <p className="font-body-base text-body-base text-on-surface-variant">{pillar.description}</p>
-              </div>
-            ))}
+            {PHILOSOPHY_PILLARS.map(pillar => {
+              const IconComponent = pillar.icon
+              return (
+                <div
+                  key={pillar.id}
+                  className="rounded-2xl border border-outline-variant/30 bg-surface-container-lowest p-8 flex flex-col items-start justify-center shadow-xs"
+                >
+                  <IconComponent className="text-primary mb-4" size={36} />
+                  <h3 className="font-h2 text-h2 text-primary mb-2">{pillar.title}</h3>
+                  <p className="font-body-base text-body-base text-on-surface-variant">{pillar.description}</p>
+                </div>
+              )
+            })}
 
             {/* Bento 4: Zero Waste Facilities */}
             <div className="md:col-span-3 rounded-2xl border border-outline-variant/30 bg-surface-container-low p-8 relative overflow-hidden">
               <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center justify-between w-full">
                 <div className="max-w-xl">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-3">energy_savings_leaf</span>
+                  <Sparkles className="text-primary mb-3" size={32} />
                   <h3 className="font-h2 text-h2 text-primary mb-2">Zero Waste Facilities</h3>
                   <p className="font-body-base text-body-base text-on-surface-variant">
                     By 2025, all Lume manufacturing hubs will operate on 100% renewable energy with zero waste sent to landfills.
@@ -177,20 +197,23 @@ const About = () => {
               </p>
             </div>
             <div className="w-full md:w-2/3 space-y-6">
-              {LONGEVITY_PROGRAMS.map(prog => (
-                <div
-                  key={prog.id}
-                  className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-8 shadow-xs flex flex-col sm:flex-row gap-6 items-start sm:items-center"
-                >
-                  <div className="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined text-on-secondary-container text-3xl">{prog.icon}</span>
+              {LONGEVITY_PROGRAMS.map(prog => {
+                const IconComponent = prog.icon
+                return (
+                  <div
+                    key={prog.id}
+                    className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-8 shadow-xs flex flex-col sm:flex-row gap-6 items-start sm:items-center"
+                  >
+                    <div className="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+                      <IconComponent className="text-on-secondary-container" size={28} />
+                    </div>
+                    <div>
+                      <h3 className="font-h2 text-h2 text-primary mb-2">{prog.title}</h3>
+                      <p className="font-body-base text-body-base text-on-surface-variant">{prog.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-h2 text-h2 text-primary mb-2">{prog.title}</h3>
-                    <p className="font-body-base text-body-base text-on-surface-variant">{prog.description}</p>
-                  </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>

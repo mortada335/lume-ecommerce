@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { NEW_ARRIVALS } from "../store/items"
+import { NEW_ARRIVALS } from "@/data/arrivals"
 import { ArrowRight } from "lucide-react"
 
 const NewArrivalsSection = () => {

@@ -3,10 +3,11 @@ import { lazy } from "react"
 
 const Home = lazy(() => import("@/features/home"))
 const Shop = lazy(() => import("@/features/shop"))
-const Store = lazy(() => import("@/features/store"))
-const Office = lazy(() => import("@/features/office"))
+const Workspace = lazy(() => import("@/features/workspace"))
 const Seating = lazy(() => import("@/features/seating"))
-const About = lazy(() => import("@/features/about"))
+const Philosophy = lazy(() => import("@/features/about"))
+const Product = lazy(() => import("@/features/product"))
+const NotFound = lazy(() => import("@/features/not-found"))
 
 export const publicRoutes = [
   {
@@ -15,23 +16,27 @@ export const publicRoutes = [
     index: true,
   },
   {
-    path: "/store",
-    element: <Store />,
-  },
-  {
     path: "/shop",
     element: <Shop />,
   },
   {
-    path: "/office",
-    element: <Office />,
+    path: "/workspace",
+    element: <Workspace />,
   },
   {
     path: "/seating",
     element: <Seating />,
   },
   {
-    path: "/about",
-    element: <About />,
+    path: "/philosophy",
+    element: <Philosophy />,
+  },
+  {
+    path: "/product/:id",
+    element: <Product />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]
