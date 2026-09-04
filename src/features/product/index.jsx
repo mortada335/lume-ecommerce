@@ -266,7 +266,7 @@ const ProductDetail = () => {
                 onClick={handleAddToCart}
                 className="flex-1 rounded-xl bg-primary py-4 font-label-sm text-label-sm text-on-primary shadow-sm transition-all hover:bg-primary-container hover:text-on-primary-container active:scale-[0.98]"
               >
-                Add to Cart — {product.formattedPrice}
+                Add to Cart
               </button>
               <button
                 onClick={() => setWishlisted((w) => !w)}
